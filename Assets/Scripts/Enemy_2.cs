@@ -27,7 +27,7 @@ public class Enemy_2 : Enemy
         }
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
         EnemyMovement();
         if (moveRight)

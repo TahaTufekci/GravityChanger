@@ -25,7 +25,7 @@ public class Enemy_3 : Enemy
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Barrier"))
+        if (collision.collider.CompareTag("Barrier"))
         {
             direction *= -1;
         }
