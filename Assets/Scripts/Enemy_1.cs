@@ -19,7 +19,7 @@ public class Enemy_1 : Enemy
         transform.Translate(transform.right * speed * direction * Time.deltaTime);
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
         Vector2 stageDimensions = Camera.main.ScreenToWorldPoint(new Vector2(Screen.width, Screen.height));
         EnemyMovement();
@@ -35,7 +35,7 @@ public class Enemy_1 : Enemy
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Barrier"))
+        if (collision.collider.CompareTag("Barrier"))
         {
             direction *= -1;
         }
