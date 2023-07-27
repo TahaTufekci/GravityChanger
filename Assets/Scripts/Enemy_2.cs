@@ -29,7 +29,6 @@ public class Enemy_2 : Enemy
 
     private void Update()
     {
-        //int delay = (int)Time.deltaTime;
         EnemyMovement();
         if (moveRight)
         {
