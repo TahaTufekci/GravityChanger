@@ -9,7 +9,7 @@ public class Enemy_2 : Enemy
     [SerializeField] float speed; //movement speed
     private Vector2 startPosition;
     private bool moveRight = true;
-    
+
     void Start()
     {
         startPosition = transform.position;
@@ -42,11 +42,11 @@ public class Enemy_2 : Enemy
     void MoveRight()
     {
         startPosition += Vector2.right * Time.deltaTime * speed;
-        transform.position = startPosition + Vector2.up * Mathf.Sin(Time.time * speed/3) * 1;
+        transform.position = startPosition + Vector2.up * Mathf.Sin(Time.time * speed / 3) * 1;
     }
     void MoveLeft()
     {
         startPosition -= Vector2.right * Time.deltaTime * speed;
-        transform.position = startPosition + Vector2.up * Mathf.Sin(Time.time * speed/3) * 1;
+        transform.position = startPosition + Vector2.up * Mathf.Sin(Time.time * speed / 3) * 1;
     }
 }
