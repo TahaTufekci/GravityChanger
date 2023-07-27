@@ -15,15 +15,15 @@ public class Enemy_3 : Enemy
 
     public override void EnemyMovement()
     {
-        transform.Translate(transform.up * speed * direction * Time.deltaTime);
+        transform.Translate(Vector2.up * speed * direction * Time.deltaTime);
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
         EnemyMovement();
     }
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Barrier"))
         {
