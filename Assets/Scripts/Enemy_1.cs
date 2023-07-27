@@ -30,8 +30,6 @@ public class Enemy_1 : Enemy
         EnemyMovement();
         if (groundCheck.collider == false)
         {
-            Debug.Log("girdin mi ");
-
             if (movingRight)
             {
                 transform.eulerAngles = new Vector3 (0, -180, 0);
@@ -43,7 +41,6 @@ public class Enemy_1 : Enemy
                 direction = 1;
             }
         }
-        Debug.Log("ground " + groundCheck.collider);
 
         if (transform.position.x >= stageDimensions.x) //go to left if at the right edge of screen
         {
