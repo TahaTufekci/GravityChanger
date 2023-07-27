@@ -9,14 +9,11 @@ public class Player : MonoBehaviour
     [SerializeField] float speed; //movement speed
     public bool stopMovement;
     private Rigidbody2D playerRb;
-    public Vector3 gravity;
     private Vector2 stageDimensions;
     
     void Awake()
     {
         playerRb = GetComponent<Rigidbody2D>();
-        //playerRb.useGravity = false;
-        gravity = Physics.gravity;
     }
     
     void Update()
@@ -40,15 +37,9 @@ public class Player : MonoBehaviour
                 transform.position = new Vector3(transform.position.x, Mathf.Clamp(transform.position.y, -stageDimensions.y, stageDimensions.y),transform.position.z);
             }
         }
-        if (Input.GetMouseButtonDown(0)) //mouse sol
+        if (Input.GetMouseButtonDown(0))
         {
-            ReverseGravity();
+            playerRb.gravityScale *= -1;
         }
     }
-    void FixedUpdate()
-    {
-        //playerRb.AddForce(gravity, ForceMode.Acceleration);
-    }
-
-    void ReverseGravity() => gravity *= -1;
 }
