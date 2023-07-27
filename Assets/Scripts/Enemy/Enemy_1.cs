@@ -33,12 +33,14 @@ public class Enemy_1 : Enemy
             if (movingRight)
             {
                 transform.eulerAngles = new Vector3 (0, -180, 0);
-                direction = -1;;
+                direction = -1;
+                movingRight = false;
             }
             else
             {
                 transform.eulerAngles = new Vector3(0, 0, 0);
                 direction = 1;
+                movingRight = true;
             }
         }
 
