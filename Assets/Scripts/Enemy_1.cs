@@ -8,6 +8,9 @@ public class Enemy_1 : Enemy
     private Rigidbody2D enemyRb;
     public int direction; //direction of movement, left or righ (1 or -1)
     [SerializeField] float speed; //movement speed
+    public float rayDist;
+    private bool movingRight = true;
+    public Transform groundDetect;
 
     private void Start()
     {
@@ -22,13 +25,34 @@ public class Enemy_1 : Enemy
     private void FixedUpdate()
     {
         Vector3 stageDimensions = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height,0));
+        RaycastHit2D groundCheck = Physics2D.Raycast(groundDetect.position, Vector2.down, rayDist);
+
         EnemyMovement();
+        if (groundCheck.collider == false)
+        {
+            Debug.Log("girdin mi ");
+
+            if (movingRight)
+            {
+                transform.eulerAngles = new Vector3 (0, -180, 0);
+                direction = -1;;
+            }
+            else
+            {
+                transform.eulerAngles = new Vector3(0, 0, 0);
+                direction = 1;
+            }
+        }
+        Debug.Log("ground " + groundCheck.collider);
+
         if (transform.position.x >= stageDimensions.x) //go to left if at the right edge of screen
         {
+            transform.eulerAngles = new Vector3 (0, -180, 0);
             direction = -1;
         }
         else if (transform.position.x <= -stageDimensions.x) //go to right if at the left edge of screen
         {
+            transform.eulerAngles = new Vector3(0, 0, 0);
             direction = 1;
         }
     }
