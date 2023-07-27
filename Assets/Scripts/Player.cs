@@ -18,7 +18,7 @@ public class Player : MonoBehaviour
     
     void Update()
     {
-        stageDimensions = Camera.main.ScreenToWorldPoint(new Vector2(Screen.width, Screen.height));
+        stageDimensions = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height,0));
 
         if (!stopMovement)
         {

@@ -21,7 +21,7 @@ public class Enemy_1 : Enemy
 
     private void FixedUpdate()
     {
-        Vector2 stageDimensions = Camera.main.ScreenToWorldPoint(new Vector2(Screen.width, Screen.height));
+        Vector3 stageDimensions = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height,0));
         EnemyMovement();
         if (transform.position.x >= stageDimensions.x) //go to left if at the right edge of screen
         {

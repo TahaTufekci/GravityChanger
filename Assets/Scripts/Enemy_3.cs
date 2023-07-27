@@ -15,7 +15,7 @@ public class Enemy_3 : Enemy
 
     public override void EnemyMovement()
     {
-        transform.Translate(Vector2.up * speed * direction * Time.deltaTime);
+        transform.Translate(transform.up * speed * direction * Time.deltaTime);
     }
 
     private void FixedUpdate()
