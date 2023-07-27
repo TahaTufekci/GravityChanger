@@ -4,17 +4,13 @@ using UnityEngine;
 
 public class CameraFollow : MonoBehaviour
 {
-    public GameObject targetObject;
-    public Vector3 cameraOffset;
-    public Vector3 targetedPosition;
-    private Vector3 velocity = Vector3.zero;
+    [SerializeField]
+    private Transform targetToFollow;
 
-    public float smoothTime = 0.5f;
-    void LateUpdate()
+    void Update()
     {
-        targetedPosition = targetObject.transform.position + cameraOffset;
-        transform.position = Vector3.SmoothDamp(transform.position, targetedPosition, ref velocity , smoothTime );
+        transform.position = new Vector3(transform.position.x, Mathf.Clamp(targetToFollow.position.y, 0f, 10f),
+            transform.position.z);
     }
-
 
 }
