@@ -47,10 +47,12 @@ public class Player : MonoBehaviour
     {
         if(collision.gameObject.CompareTag("End"))
         {
+            AudioManager.Instance.PlaySound("WinSFX");
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
         else if(collision.gameObject.CompareTag("Enemy"))
         {
+            AudioManager.Instance.PlaySound("LoseSFX");
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
     }
