@@ -44,6 +44,7 @@ public class Player : MonoBehaviour
         }
         if (Input.GetMouseButtonDown(0))
         {
+            GameObject.FindObjectOfType<AManager>().playSound("Ziplama");
             playerRb.gravityScale *= -1;
         }
     }
@@ -61,7 +62,9 @@ public class Player : MonoBehaviour
         }
         else if(collision.gameObject.CompareTag("Enemy"))
         {
+            //GameObject.FindObjectOfType<AudioManager>().
             AudioManager.Instance.PlaySound("LoseSFX");
+            //GameObject.FindObjectOfType<AManager>().playSound("Death");
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
     }
