@@ -11,7 +11,7 @@ public class Player : MonoBehaviour
     public bool stopMovement;
     private Rigidbody2D playerRb;
     private Vector2 stageDimensions;
-    private bool isPLayerUpsideDown;
+    int originalXRotation;
 
     GManager gameManager;
 
@@ -29,15 +29,15 @@ public class Player : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
             playerRb.gravityScale *= -1;
-            if (isPLayerUpsideDown)
+            if (playerRb.gravityScale > 0)
             {
-                transform.eulerAngles = new Vector3 ((0) , transform.position.y, 0);
-                isPLayerUpsideDown = false;
+                transform.eulerAngles = new Vector3 ((0) , transform.eulerAngles.y, 0);
+                originalXRotation = 0;
             }
             else
             {
-                transform.eulerAngles = new Vector3 ((180) , transform.position.y, 0);
-                isPLayerUpsideDown = true;
+                transform.eulerAngles = new Vector3 ((180) , transform.eulerAngles.y, 0);
+                originalXRotation = 180;
             }
         }
         if (!stopMovement)
@@ -45,19 +45,15 @@ public class Player : MonoBehaviour
             transform.Translate(transform.right * speed * direction * Time.deltaTime);
             if (transform.position.x >= stageDimensions.x) //go to left if at the right edge of screen
             {
-                transform.eulerAngles = new Vector3 (transform.position.x, -180, 0);
+                transform.eulerAngles = new Vector3 (originalXRotation, -180, 0);
                 direction = -1;
             }
             else if (transform.position.x <= -stageDimensions.x) //go to right if at the left edge of screen
             {
-                transform.eulerAngles = new Vector3 (transform.position.x, 0, 0);
+                transform.eulerAngles = new Vector3 (originalXRotation, 0, 0);
                 direction = 1;
             }
 
-            if (transform.position.y >= stageDimensions.y)
-            {
-                transform.position = new Vector3(transform.position.x, Mathf.Clamp(transform.position.y, -stageDimensions.y, stageDimensions.y),transform.position.z);
-            }
         }
         
     }
