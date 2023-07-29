@@ -2262,6 +2262,8 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 7
+<<<<<<< HEAD
+=======
 --- !u!1 &1297228318
 GameObject:
   m_ObjectHideFlags: 0
@@ -2500,6 +2502,7 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1311330864}
   m_CullTransparentMesh: 1
+>>>>>>> parent of 7ea7eb6 (Merge branch 'main' into Taha)
 --- !u!1 &1321446787
 GameObject:
   m_ObjectHideFlags: 0
@@ -3231,6 +3234,8 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+<<<<<<< HEAD
+=======
 --- !u!1 &1625649824
 GameObject:
   m_ObjectHideFlags: 0
@@ -3546,6 +3551,7 @@ TilemapCollider2D:
   m_MaximumTileChangeCount: 1000
   m_ExtrusionFactor: 0
   m_UseDelaunayMesh: 0
+>>>>>>> parent of 7ea7eb6 (Merge branch 'main' into Taha)
 --- !u!1 &1749049189
 GameObject:
   m_ObjectHideFlags: 0
@@ -4017,7 +4023,11 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
+<<<<<<< HEAD
+  m_RootOrder: 10
+=======
   m_RootOrder: 11
+>>>>>>> parent of 7ea7eb6 (Merge branch 'main' into Taha)
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &8071374574723571081
 PrefabInstance:
@@ -4037,7 +4047,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3154298218383685670, guid: d06f7addb8d14a247a437cec47c45499, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.43
+      value: -3.09
       objectReference: {fileID: 0}
     - target: {fileID: 3154298218383685670, guid: d06f7addb8d14a247a437cec47c45499, type: 3}
       propertyPath: m_LocalPosition.y
