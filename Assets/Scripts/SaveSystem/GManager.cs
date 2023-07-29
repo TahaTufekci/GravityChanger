@@ -1,12 +1,25 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using Helpers;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class GManager : MonoBehaviour
 {
     public GameObject player;
-    public SaveSystem saveSystem;
+    private SaveSystem saveSystem;
+    public static Action<GameState> OnGameStateChanged;
+    public GameState currentGameState = GameState.Default;
+
+    public void ChangeGameState(GameState state)
+    {
+        if (currentGameState != state)
+        {
+            currentGameState = state;
+            OnGameStateChanged?.Invoke(state);
+        }
+    }
 
     private void Awake()
     {
