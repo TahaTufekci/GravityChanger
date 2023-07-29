@@ -14,7 +14,7 @@ TagManager:
   - 
   - Water
   - UI
-  - 
+  - Player
   - 
   - 
   - 
@@ -46,4 +46,10 @@ TagManager:
     locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: DetailsBottom
+    uniqueID: 1495464851
+    locked: 0
+  - name: New Layer 3
+    uniqueID: 1512404431
     locked: 0
