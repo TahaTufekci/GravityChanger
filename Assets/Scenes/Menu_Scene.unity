@@ -1458,8 +1458,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0.000015258789}
-  m_SizeDelta: {x: -432, y: 1000}
+  m_AnchoredPosition: {x: 0, y: -10}
+  m_SizeDelta: {x: -432, y: 1273.9392}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1073867729
 MonoBehaviour:
@@ -1766,7 +1766,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 7890599964043295122, guid: d06f7addb8d14a247a437cec47c45499, type: 3}
-  saveSystem: {fileID: 1051332983}
+  currentGameState: 0
 --- !u!1 &1355355293
 GameObject:
   m_ObjectHideFlags: 0
