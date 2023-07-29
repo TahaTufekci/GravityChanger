@@ -14,13 +14,13 @@ public class Player : MonoBehaviour
     int originalXRotation, originalYRotation;
     
 
-    GManager gameManager;
+    GameManager gameManager;
 
     
     void Awake()
     {
         playerRb = GetComponent<Rigidbody2D>();
-        gameManager = FindObjectOfType<GManager>();
+        gameManager = FindObjectOfType<GameManager>();
     }
     
     void Update()

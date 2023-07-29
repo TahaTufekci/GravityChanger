@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class ExitLevel : MonoBehaviour
 {
-    GManager gameManager;
+    GameManager gameManager;
     public LayerMask playerMask;
 
     private void Awake()
     {
-        gameManager = FindObjectOfType<GManager>();
+        gameManager = FindObjectOfType<GameManager>();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

@@ -18,7 +18,11 @@ public class UIManager : MonoBehaviour
     
     [SerializeField] private Image mainMask;
 
+    public Slider musicSlider;
+
     public void FadeInBackButtonPanel()
+
+
     {
         pausePanel.gameObject.SetActive(true);
         pausePanel.gameObject.transform.DOScale(Vector3.one, 0.5f).From(Vector3.zero);
@@ -76,11 +80,11 @@ public class UIManager : MonoBehaviour
     }
     private void OnEnable()
     {
-        GManager.OnGameStateChanged += ControlPanels;
+        GameManager.OnGameStateChanged += ControlPanels;
     }
 
     private void OnDisable()
     {
-        GManager.OnGameStateChanged -= ControlPanels;
+        GameManager.OnGameStateChanged -= ControlPanels;
     }
 }

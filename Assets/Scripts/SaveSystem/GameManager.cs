@@ -5,10 +5,10 @@ using Helpers;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class GManager : MonoBehaviour
+public class GameManager : MonoBehaviour
 {
     public GameObject player;
-    private SaveSystem saveSystem;
+    public SaveSystem saveSystem;
     public static Action<GameState> OnGameStateChanged;
     public GameState currentGameState = GameState.Default;
 

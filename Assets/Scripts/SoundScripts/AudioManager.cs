@@ -2,10 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class AudioManager : MonoBehaviour
 {
     public Audio[] audios;
     public static AudioManager instance;
+    
 
     private void Start()
     {
@@ -19,6 +21,7 @@ public class AudioManager : MonoBehaviour
         GameObject.DontDestroyOnLoad(instance);
 
     }
+
 
     public void playSound(string name)
     {

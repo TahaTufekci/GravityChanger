@@ -10,7 +10,7 @@ namespace UI.Buttons
 {
     public class PauseButton : MonoBehaviour
     {
-        [SerializeField] private GManager gameManager;
+        [SerializeField] private GameManager gameManager;
 
         public void ChangeTheGameState()
         {
