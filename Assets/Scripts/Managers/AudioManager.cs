@@ -85,9 +85,8 @@ public class AudioManager : MonoBehaviour {
     {
         foreach (var sound in sounds)
         {
-            AudioSource source = (AudioSource)Instantiate(sourcePrefab, gameObject.transform);
+            AudioSource source = Instantiate(sourcePrefab, gameObject.transform);
             source.name = sound.Name;
-
             sound.Source = source;
         }
     }
