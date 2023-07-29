@@ -11,10 +11,14 @@ public class Player : MonoBehaviour
     public bool stopMovement;
     private Rigidbody2D playerRb;
     private Vector2 stageDimensions;
+
+    GManager gameManager;
+
     
     void Awake()
     {
         playerRb = GetComponent<Rigidbody2D>();
+        gameManager = FindObjectOfType<GManager>();
     }
     
     void Update()
@@ -49,6 +53,11 @@ public class Player : MonoBehaviour
         {
             AudioManager.Instance.PlaySound("WinSFX");
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+
+            gameManager.SaveData();
+            gameManager.LoadNextLevel();
+
+
         }
         else if(collision.gameObject.CompareTag("Enemy"))
         {
