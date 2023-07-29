@@ -48,6 +48,7 @@ public class Player : MonoBehaviour
 
         if (Input.GetMouseButtonDown(0))
         {
+            GameObject.FindObjectOfType<AudioManager>().playSound("Click");
             playerRb.gravityScale *= -1;
             if (playerRb.gravityScale > 0)
             {
@@ -66,7 +67,7 @@ public class Player : MonoBehaviour
     {
         if(collision.gameObject.CompareTag("End"))
         {
-            AudioManager.Instance.PlaySound("WinSFX");
+            
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
 
             gameManager.SaveData();
@@ -76,7 +77,7 @@ public class Player : MonoBehaviour
         }
         else if(collision.gameObject.CompareTag("Enemy"))
         {
-            AudioManager.Instance.PlaySound("LoseSFX");
+            GameObject.FindObjectOfType<AudioManager>().playSound("Death");
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
     }
