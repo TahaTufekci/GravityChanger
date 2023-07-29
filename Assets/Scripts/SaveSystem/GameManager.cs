@@ -23,7 +23,6 @@ public class GameManager : MonoBehaviour
 
     private void Awake()
     {
-        //SceneManager.sceneLoaded += Initialize;
         DontDestroyOnLoad(gameObject);
     }
 

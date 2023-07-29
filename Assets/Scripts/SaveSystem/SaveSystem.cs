@@ -11,8 +11,6 @@ public class SaveSystem : MonoBehaviour
 
     public UnityEvent<bool> OnDataLoadedResult;
 
-    //private bool isInitializes = false;
-
     private void Awake()
     {
         DontDestroyOnLoad(gameObject);
@@ -26,6 +24,7 @@ public class SaveSystem : MonoBehaviour
 
     }
 
+    //delete current data 
     public void ResetData()
     {
         PlayerPrefs.DeleteKey(sceneKey);
@@ -43,6 +42,7 @@ public class SaveSystem : MonoBehaviour
         return false;
     }
 
+    //save scene data
     public void SaveData(int sceneIndex)
     {
         if (LoadedData == null)

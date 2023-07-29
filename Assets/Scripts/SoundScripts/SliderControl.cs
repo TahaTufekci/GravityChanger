@@ -4,6 +4,8 @@ using UnityEngine;
 using UnityEngine.UI;
 public class SliderControl : MonoBehaviour
 {
+    //this script controls volume in the slider
+
     [SerializeField] Slider volumeSlider;
 
     private void Start()
@@ -26,12 +28,14 @@ public class SliderControl : MonoBehaviour
     }
 
     private void Load()
-    {
+    { 
+        //volume load 
         volumeSlider.value = PlayerPrefs.GetFloat("musicVolume");
     }
 
     private void Save()
     {
+        //volume save
         PlayerPrefs.SetFloat("musicVolume", volumeSlider.value);
     }
 
