@@ -18,8 +18,6 @@ public class UIManager : MonoBehaviour
     
     [SerializeField] private Image mainMask;
 
-    public Slider musicSlider;
-
     public void FadeInBackButtonPanel()
 
 
