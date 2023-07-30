@@ -33,13 +33,13 @@ public class Enemy_1 : Enemy
             if (movingRight)
             {
                 transform.eulerAngles = new Vector3 (0, -180, 0);
-                direction = -1;
+                direction *= -1;
                 movingRight = false;
             }
             else
             {
                 transform.eulerAngles = new Vector3(0, 0, 0);
-                direction = 1;
+                direction *= -1;
                 movingRight = true;
             }
         }
@@ -47,12 +47,14 @@ public class Enemy_1 : Enemy
         if (transform.position.x >= stageDimensions.x) //go to left if at the right edge of screen
         {
             transform.eulerAngles = new Vector3 (0, -180, 0);
-            direction = -1;
+            direction *= -1;
+            movingRight = false;
         }
         else if (transform.position.x <= -stageDimensions.x) //go to right if at the left edge of screen
         {
             transform.eulerAngles = new Vector3(0, 0, 0);
-            direction = 1;
+            direction *= -1;
+            movingRight = true;
         }
     }
 
