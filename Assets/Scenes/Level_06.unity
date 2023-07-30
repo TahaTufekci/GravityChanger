@@ -123,6 +123,11 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &158624462 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1505000705787006819, guid: 077647a522980654f806eb03a9917fc5, type: 3}
+  m_PrefabInstance: {fileID: 727496767}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &161265062
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -258,6 +263,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 8071374574723571082}
+  saveSystem: {fileID: 0}
   currentGameState: 0
 --- !u!1 &192375308
 GameObject:
@@ -1226,16 +1232,48 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4287467879596612587, guid: 077647a522980654f806eb03a9917fc5, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4287467879596612587, guid: 077647a522980654f806eb03a9917fc5, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1505000705787006819, guid: 077647a522980654f806eb03a9917fc5, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1013585188}
   m_SourcePrefab: {fileID: 100100000, guid: 077647a522980654f806eb03a9917fc5, type: 3}
 --- !u!4 &1013585187 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3072400340350439987, guid: 077647a522980654f806eb03a9917fc5, type: 3}
   m_PrefabInstance: {fileID: 727496767}
   m_PrefabAsset: {fileID: 0}
+--- !u!95 &1013585188
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 158624462}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 122483d067deb124581b72a4028a90f2, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1172378322
 GameObject:
   m_ObjectHideFlags: 0
