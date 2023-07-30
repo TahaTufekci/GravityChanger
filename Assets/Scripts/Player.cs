@@ -10,6 +10,13 @@ public class Player : MonoBehaviour
     public bool stopMovement;
     private Rigidbody2D playerRb;
     private Vector2 stageDimensions;
+<<<<<<< Updated upstream
+=======
+    private int deneme = 1;
+
+    GManager gameManager;
+
+>>>>>>> Stashed changes
     
     void Awake()
     {
