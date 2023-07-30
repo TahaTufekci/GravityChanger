@@ -30,7 +30,6 @@ public class Enemy_1 : Enemy
         EnemyMovement();
         if (groundCheck.collider == false)
         {
-            Debug.Log("Ground check");
             if (movingRight)
             {
                 transform.eulerAngles = new Vector3 (0, -180, 0);

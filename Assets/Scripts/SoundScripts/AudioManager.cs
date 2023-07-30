@@ -32,7 +32,7 @@ public class AudioManager : MonoBehaviour
                 if (item.source == null)
                     item.source = gameObject.AddComponent<AudioSource>();
                 item.source.clip = item.clip;
-                item.source.volume = item.volume;
+                item.source.volume = PlayerPrefs.GetFloat("musicVolume");
                 item.source.loop = item.loop;
 
                 item.source.Play();
