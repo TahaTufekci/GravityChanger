@@ -11,6 +11,7 @@ public class Player : MonoBehaviour
     public bool stopMovement;
     private Rigidbody2D playerRb;
     private Vector2 stageDimensions;
+    private int conflict = 7;
 
     GManager gameManager;
 
