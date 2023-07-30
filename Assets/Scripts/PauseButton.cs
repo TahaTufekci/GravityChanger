@@ -16,6 +16,7 @@ namespace UI.Buttons
         {
             gameManager.ChangeGameState(GameState.Pause);
         }
+        
 
         public void Continue()
         {
@@ -39,6 +40,7 @@ namespace UI.Buttons
         {
             gameObject.transform.DOScale(Vector3.one, 0.5f).From(Vector3.zero);
         }
+      
 
     }
 }

@@ -46,4 +46,13 @@ public class GameManager : MonoBehaviour
         if (player != null)
             saveSystem.SaveData(SceneManager.GetActiveScene().buildIndex + 1);
     }
+    public void Pause()
+    {
+        Time.timeScale = 0;
+    }
+
+    public void Unpause()
+    {
+        Time.timeScale = 1;
+    }
 }

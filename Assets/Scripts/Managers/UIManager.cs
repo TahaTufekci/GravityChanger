@@ -17,13 +17,21 @@ public class UIManager : MonoBehaviour
     #endregion 
     
     [SerializeField] private Image mainMask;
+    [SerializeField] private GameManager gameManager;
 
     public void FadeInBackButtonPanel()
-
-
     {
         pausePanel.gameObject.SetActive(true);
         pausePanel.gameObject.transform.DOScale(Vector3.one, 0.5f).From(Vector3.zero);
+        StartCoroutine("PauseSecond");
+    }
+    IEnumerator PauseSecond() {
+        yield return new WaitForSecondsRealtime(0.4f); //Wait 1 second
+        gameManager.Pause();
+    }
+    IEnumerator UnpauseSecond() {
+        yield return new WaitForSecondsRealtime(0.1f); //Wait 1 second
+        gameManager.Unpause();
     }
   
    /* public void FadeInFinishPanel()
@@ -67,6 +75,7 @@ public class UIManager : MonoBehaviour
         else if(gameState.HasFlag(GameState.Playing))
         {
             SetMaskState(mainMask, false);
+            StartCoroutine("UnpauseSecond");
         }
         else if(gameState.HasFlag(GameState.Finish))
         {
