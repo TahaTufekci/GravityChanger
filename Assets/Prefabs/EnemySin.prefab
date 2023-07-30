@@ -174,3 +174,4 @@ MonoBehaviour:
   horizontalDirection: 1
   verticalDirection: 1
   speed: 5
+  direction: 1
