@@ -22,11 +22,11 @@ public class UIManager : MonoBehaviour
     public void FadeInBackButtonPanel()
     {
         pausePanel.gameObject.SetActive(true);
-        pausePanel.gameObject.transform.DOScale(Vector3.one, 0.5f).From(Vector3.zero);
+        pausePanel.gameObject.transform.DOScale(Vector3.one, 0.3f).From(Vector3.zero);
         StartCoroutine("PauseSecond");
     }
     IEnumerator PauseSecond() {
-        yield return new WaitForSecondsRealtime(0.4f); //Wait 1 second
+        yield return new WaitForSecondsRealtime(0.3f); //Wait 1 second
         gameManager.Pause();
     }
     IEnumerator UnpauseSecond() {
@@ -67,7 +67,7 @@ public class UIManager : MonoBehaviour
         
          if(gameState.HasFlag(GameState.Pause))
         {
-            mainMask.DOFade(0.5f, 0.5f).SetDelay(0.8f).From(0f);
+            mainMask.DOFade(0.5f, 0.5f).SetDelay(0.3f).From(0f);
             SetMaskState(mainMask, true);
             Sequence sequence = DOTween.Sequence();
             sequence.PrependInterval(0.2f).OnStepComplete(() => FadeInBackButtonPanel());

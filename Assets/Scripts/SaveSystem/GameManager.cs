@@ -12,6 +12,8 @@ public class GameManager : MonoBehaviour
     public static Action<GameState> OnGameStateChanged;
     public GameState currentGameState = GameState.Default;
 
+    public SliderControl sliderControl;
+
     public void ChangeGameState(GameState state)
     {
         if (currentGameState != state)
@@ -39,12 +41,14 @@ public class GameManager : MonoBehaviour
     public void LoadNextLevel()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        sliderControl.Load();
     }
 
     public void SaveData()
     {
         if (player != null)
             saveSystem.SaveData(SceneManager.GetActiveScene().buildIndex + 1);
+        sliderControl.Save();
     }
     public void Pause()
     {

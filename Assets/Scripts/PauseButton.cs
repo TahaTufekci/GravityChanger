@@ -12,8 +12,6 @@ namespace UI.Buttons
     {
         [SerializeField] private GameManager gameManager;
 
-        SliderControl sliderControl;
-
         public void ChangeTheGameState()
         {
             gameManager.ChangeGameState(GameState.Pause);
@@ -30,8 +28,8 @@ namespace UI.Buttons
         public void MainMenu()
         {
             DOTween.KillAll();
+            gameManager.Unpause();
             SceneManager.LoadScene(0);
-            sliderControl.Load();
         }
         
         public void OnEnable()

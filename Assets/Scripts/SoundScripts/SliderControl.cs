@@ -33,7 +33,7 @@ public class SliderControl : MonoBehaviour
         volumeSlider.value = PlayerPrefs.GetFloat("musicVolume");
     }
 
-    private void Save()
+    public void Save()
     {
         //volume save
         PlayerPrefs.SetFloat("musicVolume", volumeSlider.value);
